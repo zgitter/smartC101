@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "get_mood",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_mood",
+						"type": "string"
+					}
+				],
+				"name": "set_mood",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"0_moodSG/moodc.sol": "moodc"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"0_moodSG/moodc.sol": {
+			"keccak256": "0x00b2a5da8d98f152a0c69f822750aad90622b89de7bb1dcc0292e0673189d856",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://50ed2b61c7bb70f827487d0846a8d6cef0e81055f5a4983473d38c846e029c43",
+				"dweb:/ipfs/QmSaDUEU1ZGmxxPZmMVvdQmAzuk2cWzqFVxGxDadd8T28a"
+			]
+		}
+	},
+	"version": 1
+}
