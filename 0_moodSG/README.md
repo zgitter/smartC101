@@ -13,7 +13,6 @@ First it sets a mood and then gets it back if required. (You can only reap what 
 
 ## How does it
 
-### High level working principle
 ### Components
 
 <ul>
@@ -27,9 +26,50 @@ First it sets a mood and then gets it back if required. (You can only reap what 
         </ul>
             <li> Tools/Enablers </li>
         <ul>
-            <li>Compiler & deployer: written/coded/compiled & deployed to the testnet from Remix</li>
-            <li>An Ether to connect the above ... how the hell??? What is it this ether.js thing anyway???</li>
-            <li>... and what a hell is this .... ?(Be sure to deploy on Goerli via Remix under the Injected Provider - MetaMask environment and confirm the deployment transaction in Metamask) as found as learn from learnweb3??? .... what is the real role of Metamask here??? ..... in a clear langauge! (as we already know how to code/compile/deploy (from a remix/or to testnet bc!) & access the contract)</li>
-            <li> .... So, MetaMask will be our wallet. But more than that, its also offering a 'proxy to a blockchain node'. And it does this, by injecting itself as a 'web3 Provider into a website'.</li>
+            <li>
+                Compiler & deployer: Remix! It provides us written/coded/compiled & deployable to the testnet form of 
+                the smart contrac
+            </li>
+
+            <li>
+                Ethereumn network API: Provider & Signer! 
+
+                <ul>
+                    <li>
+                        provider: a read-only abstraction to access the blockchain data
+                    </li>
+                    <li>
+                        signer: this will be a Wallet class that inherits Signer
+                        and can sign transactions and messages using a private key 
+                        (as a standard Externally Owned Account (EOA))[wtf???!]. So, this is fo writing/setting mood.
+                    </li>
+                </ul>
+                can also be called Web3 provider, ethers provider???, or any better?): Ethers! ... so how does MetaMask play here?!?! .... So, MetaMask is not just our wallet.
+                (But more than that, its also offering a 'proxy to a blockchain node'. 
+                And it does this, by injecting itself as a 'web3 Provider' into a website. ....'this point is taken.. so learn it & write it again')
+                An Ether to connect the above ... ? 
+                (to connect the smartC & the blockchain?) 
+
+                </br>
+                ... and what a hell is this .... ?(Be sure to deploy on Goerli via Remix under 
+                the Injected Provider - MetaMask environment and confirm the deployment transaction in Metamask)
+                as found as learn from learnweb3??? .... what is the real role of Metamask here??? ..... 
+            </li> 
         </ul>
 </ul>
+
+### High level working principle
+
+1. Code/write the smart contract on Remix
+2. Compile & deploy the constract from Remix. Save the generated address & ABI of the contract.
+3. Develope the web port for the mood setting & getting interface
+4. Initiate the smart contract using the ABI & the address found earlier, also by using provider/signer APIs as follows
+<ul>
+    <li>instantiate provider with bc network. Ethers library is used here (web3 is an alt)</li>
+    <li>get a signer??? (Wallet is used as signers cannot be instantiated directly unlike providers. MetaMask is the wallet used here)</li>
+    <li>initiate the smart contract with its address, ABI, singer</li>
+</ul>
+
+5. Code set mood & get mood (async) js functions that directly call the smart contract equivalent suh methods
+   as you set & get 'your mood'   
+    

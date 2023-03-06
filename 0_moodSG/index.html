@@ -13,7 +13,7 @@
   ></script>
   
 
-    <style>
+  <style>
         body {
           text-align: center;
           font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +30,8 @@
           width: 100%;
           margin: 10px 0px 5px 0px;
         }
-      </style>
+  </style>
+     
   </head>
   
   <body>
@@ -44,10 +45,14 @@
         <button onclick="setMood()">Set Mood</button>
       </div>
       
+  
       
  <script>
- 
+
       const provider = new ethers.providers.Web3Provider(window.ethereum, "ropsten");
+      
+      //provider is an api ...... so this api to a blockchain network is initiated (with network & instance?)
+
       const MoodContractAddress = "0xC41713D80e6888ba2Ca4308301fC2e373c6aa09c";
       
   const MoodContractABI =    [
@@ -97,7 +102,6 @@ provider.send("eth_requestAccounts", []).then(() => {
     });
     
     
-    
     async function getMood() {
       const getMoodPromise = MoodContract.getMood();
       const Mood = await getMoodPromise;
@@ -109,7 +113,6 @@ provider.send("eth_requestAccounts", []).then(() => {
       const setMoodPromise = MoodContract.setMood(mood);
       await setMoodPromise; //what is this doing... waiting till....?
     }
-    
   </script>
   </body>
 </html>
