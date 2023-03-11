@@ -19,15 +19,19 @@ First it sets a mood and then gets it back if required. (You can only reap what 
     <li> 
         The smart contract service 
     </li>
+        <ul>
+            <li>
+                Contract written with Solidity: has mood setter & getter methods/functions
+            </li>
 
-         <ul>
-            <li>Contract written with Solidity: has mood setter & getter methods/functions</li>
-            <li>Decenralized database: is a blockchain used to deploy the smart contract on. A testnet blockchain network called Goerli is to be used for this purpose</li>
+            <li>
+                Decenralized database: is a blockchain used to deploy the smart contract on. A testnet blockchain network called Goerli is to be used for this purpose
+            </li>
+
             <li>
                 Web page to access the smart constract ... on a central server or where???
             </li>
         </ul>
-
     <li> 
         Tools/Enablers
     </li>
@@ -41,7 +45,6 @@ First it sets a mood and then gets it back if required. (You can only reap what 
             <li>
                 Ethereumn network API: Provider & Signer!
             </li>
-
                 <ul>
                     <li>
                         provider: a read-only abstraction to access the blockchain data
@@ -52,7 +55,7 @@ First it sets a mood and then gets it back if required. (You can only reap what 
                         and can sign transactions and messages using a private key 
                         (as a standard Externally Owned Account (EOA))[wtf???!]. So, this is fo writing/setting mood.
                     </li>
-                </ul>  
+                </ul>
         </ul>
 </ul>
 
